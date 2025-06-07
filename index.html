@@ -95,7 +95,7 @@
     weatherBox.style.display = 'none';
 
     const apiKey = 'a3397ba2a5db4c4289f84403250706';
-    const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(location)}&aqi=yes`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(location)}&aqi=yes`;
 
     try {
       const response = await fetch(url);
