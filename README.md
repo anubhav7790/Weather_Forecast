@@ -7,14 +7,15 @@ It allows users to input a location and fetch the current weather data using the
 
 ## 🔗 Live Demo
 
-[🌐 View on GitHub Pages](https://yourusername.github.io/weather-forecast-app/)  
+[🌐 View on GitHub Pages](https://anubhav7790.github.io/Weather_Forecast/)  
+NOTE : - Due to some technical Problem and not working cross proxy  it is not working but when you run it on live server it will work fine . 
 *(Replace the above link with your actual GitHub Pages URL)*
 
 ---
 
 ## 📸 Preview
 
-![Weather App Screenshot](https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80)
+![Weather App Screenshot](https://photos.app.goo.gl/2Zna5Q1Z6SUMY6n17)
 
 ---
 
