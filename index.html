@@ -94,23 +94,25 @@
     errorMsg.textContent = '';
     weatherBox.style.display = 'none';
 
-    const apiKey = 'a3397ba2a5db4c4289f84403250706'; // Replace this with your real key
-    const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${encodeURIComponent(location)}?unitGroup=metric&key=${apiKey}&contentType=json`;
+    const apiKey = 'a3397ba2a5db4c4289f84403250706';
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(location)}&aqi=yes`;
 
     try {
-      const response = await fetch(url);
-      if (!response.ok) throw new Error('API error');
-
+      const response = await fetch(proxyUrl + apiUrl); // CORS-safe fetch
+      if (!response.ok) {
+        throw new Error('Location not found or API error');
+      }
       const data = await response.json();
-      const current = data.currentConditions;
 
-      document.getElementById('cityName').textContent = `${data.resolvedAddress}`;
-      document.getElementById('condition').textContent = current.conditions;
-      document.getElementById('temp_c').textContent = current.temp;
-      document.getElementById('humidity').textContent = current.humidity;
-      document.getElementById('wind_kph').textContent = current.windspeed;
-      document.getElementById('conditionIcon').src = "https://cdn-icons-png.flaticon.com/512/1163/1163661.png"; // You can replace with weather-specific icons later
-      document.getElementById('conditionIcon').alt = current.conditions;
+      // Fill the weather details
+      document.getElementById('cityName').textContent = `${data.location.name}, ${data.location.country}`;
+      document.getElementById('condition').textContent = data.current.condition.text;
+      document.getElementById('temp_c').textContent = data.current.temp_c;
+      document.getElementById('humidity').textContent = data.current.humidity;
+      document.getElementById('wind_kph').textContent = data.current.wind_kph;
+      document.getElementById('conditionIcon').src = "https:" + data.current.condition.icon;
+      document.getElementById('conditionIcon').alt = data.current.condition.text;
 
       weatherBox.style.display = 'block';
     } catch (error) {
