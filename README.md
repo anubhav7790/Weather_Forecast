@@ -15,7 +15,7 @@ NOTE : - Due to some technical Problem and not working cross proxy  it is not wo
 
 ## 📸 Preview
 
-![Weather App Screenshot](https://cdn.corenexis.com/view/?img=mm/ju7/7hv30n.png)
+![Weather App Screenshot](https://github.com/user-attachments/assets/c9887379-4a3a-4e21-8e1b-fddbc25ef157)
 
 ---
 
