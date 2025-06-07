@@ -9,13 +9,13 @@ It allows users to input a location and fetch the current weather data using the
 
 [🌐 View on GitHub Pages](https://anubhav7790.github.io/Weather_Forecast/)  
 NOTE : - Due to some technical Problem and not working cross proxy  it is not working but when you run it on live server it will work fine . 
-*(Replace the above link with your actual GitHub Pages URL)*
+
 
 ---
 
 ## 📸 Preview
 
-![Weather App Screenshot](https://photos.app.goo.gl/2Zna5Q1Z6SUMY6n17)
+![Weather App Screenshot](https://cdn.corenexis.com/view/?img=mm/ju7/7hv30n.png)
 
 ---
 
