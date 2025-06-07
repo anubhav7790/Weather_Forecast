@@ -95,16 +95,14 @@
     weatherBox.style.display = 'none';
 
     const apiKey = 'a3397ba2a5db4c4289f84403250706';
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; 
-    const apiUrl = 'https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(location)}&aqi=yes';
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(location)}&aqi=yes`;
 
     try {
-      const response = await fetch(proxyUrl + apiUrl); 
-
+      const response = await fetch(proxyUrl + apiUrl); // CORS-safe fetch
       if (!response.ok) {
         throw new Error('Location not found or API error');
       }
-
       const data = await response.json();
 
       // Fill the weather details
