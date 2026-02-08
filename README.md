@@ -8,7 +8,7 @@ It allows users to input a location and fetch the current weather data using the
 ## 🔗 Live Demo
 
 [🌐 View on GitHub Pages](https://anubhav7790.github.io/Weather_Forecast/)  
-NOTE : - Due to some technical Problem and not working cross proxy  it is not working but when you run it on live server it will work fine . 
+NOTE : - Due to some technical Problem it is  not working as  cross proxy ,  try to run it on your local host server  . 
 
 
 ---
